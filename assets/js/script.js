@@ -282,4 +282,8 @@ var auditTask = function(taskEl){
 // load tasks for the first time
 loadTasks();
 
+setTimeout(function(){
+  alert("this message happens after 5 seconds");
+},5000);
+
 
