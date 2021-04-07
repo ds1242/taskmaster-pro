@@ -278,12 +278,17 @@ var auditTask = function(taskEl){
   } else if(Math.abs(moment().diff(time,"days")) <= 2){
     $(taskEl).addClass('list-group-item-warning');
   }
+  console.log(taskEl);
 };
+
+setInterval(function(){
+  $(".card .list-group.item").each(function(index, el) {
+    auditTask(el);
+  })
+}, 1800000);
 // load tasks for the first time
 loadTasks();
 
-setTimeout(function(){
-  alert("this message happens after 5 seconds");
-},5000);
+
 
 
